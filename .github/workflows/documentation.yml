@@ -8,14 +8,14 @@ permissions:
 jobs:
   docs:
     runs-on: ubuntu-latest
-    container:
-      image: sphinxdoc/sphinx
+    # container:
+    #   image: sphinxdoc/sphinx
     steps:
       - uses: actions/checkout@v3
       # - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
-          pip install sphinx_rtd_theme myst_parser
+          pip install sphinx sphinx_rtd_theme myst_parser
       - name: Sphinx build
         run: |
           chmod +x ./doc/build-doc.sh
