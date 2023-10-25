@@ -15,8 +15,7 @@ jobs:
       # - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
-          sphinx-build --version
-          pip install myst_parser
+          pip install sphinx_rtd_theme myst_parser
       - name: Sphinx build
         run: |
           chmod +x ./doc/build-doc.sh
